@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/planetInfoCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:text="Main Building"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/knowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:text="Know More"
+        android:textAlignment="center"
+        android:textSize="8sp" />
+
+
+</LinearLayout>
