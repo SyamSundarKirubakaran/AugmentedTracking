@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         });
 
         ModelRenderable.builder()
-                .setSource(this, R.raw.kamarajthree)
+                .setSource(this, R.raw.kamarajkamaraj)
                 .build()
                 .thenAccept(renderable -> kamarajRenderable = renderable)
                 .exceptionally(
@@ -92,20 +92,41 @@ public class MainActivity extends AppCompatActivity {
 
                     // Create the transformable andy and add it to the anchor.
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
+                    TransformableNode kamaraj = new TransformableNode(arFragment.getTransformationSystem());
+                    TransformableNode kamarajNameView = new TransformableNode(arFragment.getTransformationSystem());
+                    TransformableNode nameView = new TransformableNode(arFragment.getTransformationSystem());
+
+
                     andy.setParent(anchorNode);
                     andy.setRenderable(andyRenderable);
+                    andy.setOnTapListener(
+                            (hitTestResult, motionEvent1) -> {
+                                if(nameView.isEnabled()){
+                                    nameView.setEnabled(false);
+                                } else {
+                                    nameView.setEnabled(true);
+                                }
+                            });
                     andy.select();
 
-                    TransformableNode kamaraj = new TransformableNode(arFragment.getTransformationSystem());
-                    kamaraj.setParent(andy);
-                    kamaraj.setLocalPosition(new Vector3(andy.getLocalPosition().x - 0.5f, 0.0f, andy.getLocalPosition().z + 0.7f));
-                    kamaraj.setRenderable(kamarajRenderable);
 
-                    TransformableNode kamarajNameView = new TransformableNode(arFragment.getTransformationSystem());
+                    kamaraj.setParent(andy);
+                    kamaraj.setLocalPosition(new Vector3(andy.getLocalPosition().x - 0.4f, 0.0f, andy.getLocalPosition().z + 0.7f));
+                    kamaraj.setRenderable(kamarajRenderable);
+                    kamaraj.setOnTapListener(
+                            (hitTestResult, motionEvent1) -> {
+                                if(kamarajNameView.isEnabled()){
+                                    kamarajNameView.setEnabled(false);
+                                } else {
+                                    kamarajNameView.setEnabled(true);
+                                }
+                            });
+
                     kamarajNameView.setParent(kamaraj);
                     kamarajNameView.setLocalPosition(new Vector3(0.0f, kamaraj.getLocalPosition().y + 0.5f, 0.0f));
                     kamarajNameView.setLocalRotation(Quaternion.lookRotation(new Vector3(0.5f, 0.0f, 0.0f), Vector3.up()));
                     kamarajNameView.setRenderable(kamarajRenderable);
+                    kamarajNameView.setEnabled(false);
 
 
                     ViewRenderable.builder()
@@ -126,11 +147,11 @@ public class MainActivity extends AppCompatActivity {
                                     });
 
 
-                    TransformableNode nameView = new TransformableNode(arFragment.getTransformationSystem());
                     nameView.setParent(andy);
                     nameView.setLocalPosition(new Vector3(0.0f, andy.getLocalPosition().y + 0.5f, 0.0f));
                     nameView.setLocalRotation(Quaternion.lookRotation(new Vector3(0.5f, 0.0f, 0.0f), Vector3.up()));
                     nameView.setRenderable(andyRenderable);
+                    nameView.setEnabled(false);
 
                     ViewRenderable.builder()
                             .setView(this, R.layout.building_name)

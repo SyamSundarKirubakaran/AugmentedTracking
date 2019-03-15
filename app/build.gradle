@@ -34,7 +34,7 @@ sceneform.asset('sampledata/velammalfour.obj',
         'sampledata/velammalfour.sfa',
         'src/main/res/raw/velammalfour')
 
-sceneform.asset('sampledata/kamarajthree.obj',
+sceneform.asset('sampledata/kamarajkamaraj.obj',
         'default',
-        'sampledata/kamarajthree.sfa',
-        'src/main/res/raw/kamarajthree')
+        'sampledata/kamarajkamaraj.sfa',
+        'src/main/res/raw/kamarajkamaraj')

@@ -1,6 +1,58 @@
 {
   materials: [
     {
+      name: 'blinn1SG',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.20000000000000001,
+            0.23000000000000001,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'blinn2SG',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.17000000000000001,
+            0.17000000000000001,
+            0.17000000000000001,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
       name: 'blinn3SG',
       parameters: [
         {
@@ -8,32 +60,6 @@
         },
         {
           baseColorTint: [
-            0.5,
-            0.5,
-            0.5,
-            1,
-          ],
-        },
-        {
-          metallic: 0,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
-    },
-    {
-      name: 'blinn4SG',
-      parameters: [
-        {
-          baseColor: null,
-        },
-        {
-          baseColorTint: [
             1,
             1,
             1,
@@ -53,59 +79,7 @@
       source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
     },
     {
-      name: 'blinn5SG',
-      parameters: [
-        {
-          baseColor: null,
-        },
-        {
-          baseColorTint: [
-            0.31,
-            0.31,
-            0.31,
-            1,
-          ],
-        },
-        {
-          metallic: 0,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
-    },
-    {
-      name: 'blinn7SG',
-      parameters: [
-        {
-          baseColor: null,
-        },
-        {
-          baseColorTint: [
-            0.34999999999999998,
-            0.089999999999999997,
-            0.089999999999999997,
-            1,
-          ],
-        },
-        {
-          metallic: 0,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
-    },
-    {
-      name: 'kamarajtwo:initialShadingGroup',
+      name: 'kamarajone:initialShadingGroup',
       parameters: [
         {
           baseColor: null,
@@ -138,9 +112,9 @@
         },
         {
           baseColorTint: [
-            0.26000000000000001,
-            0.40000000000000002,
-            0.87,
+            0.31,
+            0.98999999999999999,
+            1,
             1,
           ],
         },
@@ -164,10 +138,10 @@
       'Orientation',
     ],
     collision: {},
-    file: 'sampledata/kamarajthree.obj',
-    name: 'kamarajthree',
+    file: 'sampledata/kamarajkamaraj.obj',
+    name: 'kamarajkamaraj',
     recenter: 'root',
-    scale: 0.09934900000000001,
+    scale: 0.04065700000000001,
   },
   version: '0.54:2',
 }
